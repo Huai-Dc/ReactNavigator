@@ -9,6 +9,7 @@ import {
 import screen from '../../utils/screen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import IconTextBtn from '../../components/IconTextBtn';
+import BarcodeScanner from 'react-native-barcodescanner';
 
 class Home extends Component{
     constructor(props) {

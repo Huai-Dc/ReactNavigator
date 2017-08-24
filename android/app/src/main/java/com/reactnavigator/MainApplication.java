@@ -1,7 +1,8 @@
 package com.reactnavigator;
 
-import com.oblador.vectoricons.VectorIconsPackage;
 import android.app.Application;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.eguma.barcodescanner.BarcodeScannerPackage;
 
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
@@ -23,8 +24,9 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
-          , new VectorIconsPackage()
+          new MainReactPackage(),
+          new VectorIconsPackage(),
+          new BarcodeScannerPackage()
       );
     }
   };
