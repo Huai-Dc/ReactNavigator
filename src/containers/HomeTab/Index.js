@@ -9,7 +9,9 @@ import {
 import screen from '../../utils/screen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import IconTextBtn from '../../components/IconTextBtn';
-import BarcodeScanner from 'react-native-barcodescanner';
+import BannerSwiper from '../../components/BannerSwiper';
+
+import IndexJson from '../../DataStore/dataJson';
 
 class Home extends Component{
     constructor(props) {
@@ -54,9 +56,16 @@ class Home extends Component{
     };
     render() {
         const {navigate} = this.props.navigation;
+        let bannerAry = [];
+        for(let i=0;i<IndexJson.focusList.length;i++){
+            bannerAry[bannerAry.length] = IndexJson.focusList[i].picUrl;
+        }
         return (
             <View>
-                <Text>首页</Text>
+                <Text>开始</Text>
+                {/* 首页轮播图 */}
+                <BannerSwiper picListAry={bannerAry}/>
+                <Text>结束</Text>
             </View>
         );
     }
