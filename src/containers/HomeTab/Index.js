@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import {
     View, Text, TouchableOpacity,
-    StyleSheet, TextInput,
+    StyleSheet, TextInput, ScrollView,
 } from 'react-native';
 import screen from '../../utils/screen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -55,18 +55,13 @@ class Home extends Component{
         })
     };
     render() {
-        const {navigate} = this.props.navigation;
-        let bannerAry = [];
-        for(let i=0;i<IndexJson.focusList.length;i++){
-            bannerAry[bannerAry.length] = IndexJson.focusList[i].picUrl;
-        }
         return (
-            <View>
-                <Text>开始</Text>
+            <ScrollView>
                 {/* 首页轮播图 */}
-                <BannerSwiper picListAry={bannerAry}/>
-                <Text>结束</Text>
-            </View>
+                <BannerSwiper bannerList={IndexJson.focusList} onPress={()=>{
+                    console.log(this.props)
+                }}/>
+            </ScrollView>
         );
     }
 }

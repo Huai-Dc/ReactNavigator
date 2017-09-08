@@ -4,37 +4,44 @@
 'use strict';
 import React, { Component } from 'react';
 import {
-    View, StyleSheet, Text, Image,
+    View, StyleSheet, Text, Image, TouchableOpacity,
 } from 'react-native';
 import Swiper from 'react-native-swiper';
+import screen from '../utils/screen';
 
 class BannerSwiper extends Component{
     renderImg(picList){
         let imageViews = []
         picList.map((item,index)=>{
             imageViews.push(
-                <Image
-                    key={index}
-                    style={styles.swiperItem}
-                    source={{uri:item}}
-                />
+                <TouchableOpacity
+                    onPress={()=>{
+                        console.log(this);
+                    }}
+                    key={index} style={styles.imgItem}
+                >
+                    <Image
+                        style={styles.imgItem}
+                        source={{uri:item.picUrl}}
+                    />
+                    <Text>2222</Text>
+                </TouchableOpacity>
             );
         });
-        console.log(imageViews);
         return imageViews;
     }
     render(){
-        let picList = this.props.picListAry;
+        let bannerList = this.props.bannerList;
         return (
             <View>
                 <Swiper
                     height={200}
                     loop={true} autoplay={true}
                     index={0} horizontal={true}
+                    paginationStyle={{bottom: 10}}
                 >
-                    {this.renderImg(picList)}
+                    {this.renderImg(bannerList)}
                 </Swiper>
-                {/*<Text>adsadsad</Text>*/}
             </View>
         );
     }
@@ -46,11 +53,11 @@ const styles = StyleSheet.create({
         height: 200,
         backgroundColor: '#ccc',
     },
-    swiperItem:{
+    imgItem:{
         flex: 1,
-        width:100,
-        height:100,
-    }
+        width: screen.width,
+        height: 200,
+    },
 });
 
 export default BannerSwiper;
