@@ -7,9 +7,10 @@ import {
     StyleSheet, TextInput, ScrollView,
 } from 'react-native';
 import screen from '../../utils/screen';
+import color from '../../utils/color';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import IconTextBtn from '../../components/IconTextBtn';
-import BannerSwiper from '../../components/BannerSwiper';
+import ScrollTab from '../../components/ScrollTab';
 
 import IndexJson from '../../DataStore/dataJson';
 
@@ -52,16 +53,23 @@ class Home extends Component{
                     text="扫一扫"
                 />
             ),
+            headerStyle: { //标题背景色
+                backgroundColor: color.headerBg,
+                borderBottomWidth: 0,
+            },
         })
     };
+    
     render() {
+        const {navigate} = this.props.navigation;
+        let bannerAry = [];
+        for(let i=0;i<IndexJson.focusList.length;i++){
+            bannerAry[bannerAry.length] = IndexJson.focusList[i].picUrl;
+        }
         return (
-            <ScrollView>
-                {/* 首页轮播图 */}
-                <BannerSwiper bannerList={IndexJson.focusList} onPress={()=>{
-                    console.log(this.props)
-                }}/>
-            </ScrollView>
+            <View style={styles.scrollView}>
+                <ScrollTab />
+            </View>
         );
     }
 }
@@ -74,14 +82,18 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#ECECEC',
+        backgroundColor: color.searchBarBg,
         alignSelf: 'center',
     },
     textInput:{
-        width:'90%',
+        // width:'90%',
         height: 60,
         borderWidth: 0,
-    }
+    },
+    scrollView:{
+        flex: 1,
+        borderTopWidth: 0,
+    },
 });
 
 export default Home;

@@ -7,6 +7,7 @@ import {
     TouchableOpacity, Text, StyleSheet,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import color from '../utils/color';
 
 class IconTextBtn extends Component {
     render(){
@@ -18,9 +19,9 @@ class IconTextBtn extends Component {
             >
                 <Ionicons
                     name={ data.iconName }
-                    size={ data.iconSize?data.iconSize:25 }
+                    size={ data.iconSize?data.iconSize:20 }
                 />
-                <Text>{ data.text }</Text>
+                <Text style={styles.btnText}>{ data.text }</Text>
             </TouchableOpacity>
         );
     }
@@ -36,6 +37,10 @@ const styles = StyleSheet.create({
         paddingLeft: 5,
         paddingRight: 5,
     },
+    btnText:{
+        fontSize: 10,
+        color: color.fontGray,
+    }
 });
 
 export default IconTextBtn;

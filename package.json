@@ -11,16 +11,16 @@
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.1",
     "react-native-barcodescanner": "^3.1.1",
-    "react-native-swiper": "^1.5.10",
     "react-native-vector-icons": "^4.3.0",
-    "react-navigation": "^1.0.0-beta.11",
-    "react-timer-mixin": "^0.13.3"
+    "react-navigation": "^1.0.0-beta.11"
   },
   "devDependencies": {
     "babel-jest": "20.0.3",
     "jest": "20.0.4",
-    "react-native-swiper": "^1.5.10",
-    "react-test-renderer": "16.0.0-alpha.12"
+    "react-native-scrollable-tab-view": "0.6.7",
+    "react-native-swiper": "1.5.11",
+    "react-test-renderer": "16.0.0-alpha.12",
+    "react-timer-mixin": "0.13.3"
   },
   "jest": {
     "preset": "react-native"
