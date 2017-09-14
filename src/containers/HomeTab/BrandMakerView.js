@@ -23,7 +23,7 @@ class BrandMakerView extends Component{
     }
     _renderRow(item,index){
         return (
-            <Text>111</Text>
+            <Text>11</Text>
         )
     }
     render(){
