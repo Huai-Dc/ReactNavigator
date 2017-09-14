@@ -20,7 +20,6 @@ class BrandMakerView extends Component{
             dataSource: ds.cloneWithRows(this.props.tagList.slice(0,4)),
             renderSize: 0,
         };
-        console.log(this.props)
     }
     _renderRow(item,index){
         return (
