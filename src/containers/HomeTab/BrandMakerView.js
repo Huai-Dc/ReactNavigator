@@ -23,7 +23,6 @@ class BrandMakerView extends Component{
         console.log(this.props)
     }
     _renderRow(item,index){
-        console.log(item);
         return (
             <Text>11</Text>
         )
