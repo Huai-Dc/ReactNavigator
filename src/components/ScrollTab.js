@@ -18,8 +18,8 @@ class ScrollTab extends Component{
             tabViewList.push(
                 <HomeTabView
                     key={index}
-                    tabLabel={item.name}
-                    source={item}
+                    tabLabel={ item.name }
+                    source={ item }
                 />
             );
         });
@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
         backgroundColor: color.tabSelectColor,
     },
     scrollTabStyle:{
-        flex: 1,
         height: 15,
         borderTopWidth: 0,
     },

@@ -77,7 +77,7 @@ class Home extends Component{
 const styles = StyleSheet.create({
     searchBar:{
         width: screen.width * 0.7,
-        height: 40,
+        height: 30,
         borderRadius: 5,
         flexDirection: 'row',
         justifyContent: 'center',
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     },
     textInput:{
         // width:'90%',
-        height: 60,
+        height: 50,
         borderWidth: 0,
     },
     scrollView:{

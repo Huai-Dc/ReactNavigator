@@ -16,7 +16,7 @@ class BannerSwiper extends Component{
             imageViews.push(
                 <TouchableHighlight
                     key={index} style={styles.imgItem}
-                    onPress={(item)=>console.log(item)}
+                    onPress={this.props.pressHandle.bind(this,item)}
                 >
                     <Image
                         style={styles.imgItem}

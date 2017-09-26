@@ -5,6 +5,7 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.eguma.barcodescanner.BarcodeScannerPackage;
 
 import com.facebook.react.ReactApplication;
+import com.BV.LinearGradient.LinearGradientPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -25,6 +26,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new LinearGradientPackage(),
           new VectorIconsPackage(),
           new BarcodeScannerPackage()
       );

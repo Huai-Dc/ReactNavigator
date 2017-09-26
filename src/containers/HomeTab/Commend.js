@@ -10,12 +10,14 @@ import {
 } from 'react-native';
 import BannerSwiper from '../../components/BannerSwiper';
 import BrandMakerView from './BrandMakerView';
+import NewItemView from './NewItemView';
 import IndexJson from '../../DataStore/dataJson';
 import color from '../../utils/color';
 
 class Commend extends Component{
-    imgPress() {
-        alert("跳转到");
+    imgPress(item) {
+        console.log(item);
+        alert("跳转到"+item.targetUrl);
     }
     _renderPolicy(policys){
         let policyRule = [];
@@ -33,7 +35,7 @@ class Commend extends Component{
         return policyRule;
     }
     render(){
-        let {focusList,policyDescList,tagList} = IndexJson;
+        let {focusList,policyDescList,tagList,newItemList} = IndexJson;
         return (
             <ScrollView>
                 {/* 首页轮播图 */}
@@ -47,6 +49,8 @@ class Commend extends Component{
                 </View>
                 {/* 品牌制造商 */}
                 <BrandMakerView tagList={tagList}/>
+                {/* 人气推荐 */}
+                <NewItemView newItemList={newItemList}/>
             </ScrollView>
         );
     }

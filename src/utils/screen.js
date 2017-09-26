@@ -10,5 +10,7 @@ import {
 export default {
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
+    bottomTabHeight: 60,
+    headerHeight: 50,
     statusBarHeight:  (Platform.OS === 'ios' ? 20 : 0),
 }

@@ -13,6 +13,8 @@ export default {
     goodsFontColor: '#A89570',
     borderColor: '#D3D3D3',
     fontGray: '#929292',
+    fontBrown: '#B39F78',
+    fontWhite: '#fff',
     headerBg: '#F9F9F9',
     searchBarBg: '#ECECEC', //搜索框背景色
     tabSelectColor:'#B3282C',

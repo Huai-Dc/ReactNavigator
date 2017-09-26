@@ -55,7 +55,6 @@ const Tabs = TabNavigator({
         screen: ShopCar,
         navigationOptions: {
             tabBarLabel:"购物车",
-            header: null, // 隐藏头部标题
             tabBarIcon:({tintColor,focused}) => (
                 <Ionicons name={focused?'ios-cart':'ios-cart-outline'}
                       selectedIconName="ios-cart" size={iconSize}
@@ -88,7 +87,7 @@ const Tabs = TabNavigator({
         showIcon: true, //android 默认不显示icon 需要设置为true
         indicatorStyle: { height: 0 }, //android 中TabBar 下面会显示一条线,高度为0 后就不显示
         style:{
-            backgroundColor: '#fff', //TabBar 颜色
+            backgroundColor: color.headerBg, //TabBar 颜色
             height: 60,
             borderTopWidth:1,
             borderColor: color.borderColor,
