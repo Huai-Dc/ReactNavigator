@@ -32,7 +32,7 @@ class Home extends Component{
                         style={ styles.textInput }
                         placeholder="搜索商品"
                         onFocus={() => {
-                            console.log("i'm focus");
+                            console.log("i'm focus111");
                         }}
                     />
                 </TouchableOpacity>
