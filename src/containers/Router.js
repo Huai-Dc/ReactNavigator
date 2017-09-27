@@ -31,6 +31,9 @@ const Tabs = TabNavigator({
         screen: Special,
         navigationOptions: {
             tabBarLabel:"专题",
+            headerTitleStyle:{
+                alignSelf: 'center', //安卓标题居中
+            },
             tabBarIcon:({tintColor,focused}) => (
                 <Ionicons name={focused?'ios-cafe':'ios-cafe-outline'}
                       selectedIconName="ios-cafe" size={iconSize}
@@ -55,6 +58,9 @@ const Tabs = TabNavigator({
         screen: ShopCar,
         navigationOptions: {
             tabBarLabel:"购物车",
+            headerTitleStyle:{
+                alignSelf: 'center', //安卓标题居中
+            },
             tabBarIcon:({tintColor,focused}) => (
                 <Ionicons name={focused?'ios-cart':'ios-cart-outline'}
                       selectedIconName="ios-cart" size={iconSize}
