@@ -24,7 +24,7 @@ class ShoppingCar extends Component{
     render() {
         return (
             <View>
-                <Text>购物车</Text>
+                <Text>购物车1</Text>
             </View>
         );
     }
